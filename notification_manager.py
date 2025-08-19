@@ -14,7 +14,7 @@ class NotificationManager:
         self.whatsapp_number=os.environ['TWILIO_WHATSAPP_NUMBER']
         self.client = Client(os.environ['TWILIO_ACCOUNT_SID'], os.environ['TWILIO_AUTH_TOKEN'])
         # self.connection=smtplib.SMTP(host=os.environ["EMAIL_PROVIDER_SMTP_ADDRESS"],port=587, timeout=30)
-        self.smtp_host="smtp.gmail.com"
+        self.smtp_host=os.environ['EMAIL_PROVIDER_SMTP_ADDRESS']
         self.smtp_port=587
 
     def send_emails(self,email_list, email_body):

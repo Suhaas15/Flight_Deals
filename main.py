@@ -28,6 +28,7 @@ data_manager.destination_data = sheet_data
 data_manager.update_destination_codes()
 
 customer_data = data_manager.get_customer_emails()
+pprint(customer_data)
 customer_email_list = [row["whereShouldWeSendYourBoardingPass?"] for row in customer_data]
 pprint(f"customer data:\n {customer_email_list}")
 
