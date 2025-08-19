@@ -15,8 +15,7 @@ sheet_data = data_manager.get_destination_data()
 flight_search = FlightSearch()
 notification_manager = NotificationManager()
 
-
-ORIGIN_CITY_IATA="SFO"
+ORIGIN_CITY_IATA="SJC"
 
 for row in sheet_data:
     if row["iataCode"]=="":
@@ -76,31 +75,5 @@ for destination in sheet_data:
     time.sleep(2)
     check_and_send_email(cheapest_flight)
 
-    # def check_and_send_email(cheapest_flight):
-    #     if cheapest_flight.price!="N/A" and cheapest_flight.price<destination["lowestPrice"]:
-    #         if cheapest_flight.stops==0:
-    #             message=f"Low price alert! Only USD {cheapest_flight.price} to fly direct "\
-    #                     f"from {cheapest_flight.origin_airport} to {cheapest_flight.destination_airport}, "\
-    #                     f"on {cheapest_flight.out_date} until {cheapest_flight.return_date}."
-    #         else:
-    #             message=f"Low price alert! Only USD {cheapest_flight.price} to fly "\
-    #                     f"from {cheapest_flight.origin_airport} to {cheapest_flight.destination_airport}, "\
-    #                     f"with {cheapest_flight.stops} stop(s) "\
-    #                     f"departing on {cheapest_flight.out_date} and returning on {cheapest_flight.return_date}."
-    #         print(f"Check your email. Lower price flight found to {destination['city']}!!")
-    #         notification_manager.send_whatsapp(message_body=message)
-    #         notification_manager.send_emails(email_list=customer_email_list, email_body=message)
-    #     elif cheapest_flight.price=="N/A":
-    #         print(f"No direct flight to {destination['city']}. Looking for indirect flights...")
-    #         stopover_flights=flight_search.check_flights(
-    #             ORIGIN_CITY_IATA,
-    #             destination["iataCode"],
-    #             from_time=tomorrow,
-    #             to_time=six_months_from_today,
-    #             is_direct=False,
-    #         )
-    #         cheapest_flight=find_cheapest_flight(stopover_flights)
-    #         print(f"Cheapest indirect flight price is: ${cheapest_flight.price}")
-    #         check_and_send_email(cheapest_flight)
 
 

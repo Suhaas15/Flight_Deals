@@ -13,20 +13,10 @@ class NotificationManager:
         self.twilio_verified_number=os.environ['TWILIO_VERIFIED_NUMBER']
         self.whatsapp_number=os.environ['TWILIO_WHATSAPP_NUMBER']
         self.client = Client(os.environ['TWILIO_ACCOUNT_SID'], os.environ['TWILIO_AUTH_TOKEN'])
-        # self.connection=smtplib.SMTP(host=os.environ["EMAIL_PROVIDER_SMTP_ADDRESS"],port=587, timeout=30)
         self.smtp_host=os.environ['EMAIL_PROVIDER_SMTP_ADDRESS']
         self.smtp_port=587
 
     def send_emails(self,email_list, email_body):
-        # with self.connection:
-        #     self.connection.starttls()
-        #     self.connection.login(self.email, self.email_password)
-        #     for email in email_list:
-        #         self.connection.sendmail(
-        #             from_addr=self.email,
-        #             to_addrs=email,
-        #             msg=f"Subject: AirAlert - New Low Price Flight!\n\n{email_body}".encode("utf-8")
-        #     )
         subject = "AirAlert - New Low Price Flight!"
         ctx = ssl.create_default_context(cafile=certifi.where())
 
