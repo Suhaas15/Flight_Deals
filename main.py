@@ -23,7 +23,7 @@ def build_users_by_origin(user_rows: list[dict]) -> dict[str,list[str]]:
 def format_message(cheapest) -> str:
     if cheapest.stops==0:
         return (
-            f"Low price alert! Only USD {cheapest.price} to fly direct "
+            f"Low price alert! Only {cheapest.price} USD to fly direct "
             f"from {cheapest.origin_airport} to {cheapest.destination_airport}, "
             f"on {cheapest.out_date} until {cheapest.return_date}."
         )
