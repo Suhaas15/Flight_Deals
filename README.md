@@ -51,8 +51,7 @@ your target price. ✨
     -   Sends deal alerts to:
         -   📧 User emails (via SMTP + Gmail)
         -   💬 WhatsApp messages (via Twilio API)
-
-    *(screenshots placeholder)*\
+\
     ![Email Screenshot](assets/mail.png)\
     ![WhatsApp Screenshot](assets/whatsapp.png)
 
