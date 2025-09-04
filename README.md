@@ -31,7 +31,7 @@ your target price. ✨
         -   Email address
     -   [📄 Google Form Link](https://docs.google.com/forms/d/e/1FAIpQLSf2K1UsAHuh7oVz_aV-DnjziWq9qBjEk2xE01y2zSlUISd0AQ/viewform?usp=dialog)
 
-    *(screenshot placeholder)*\
+    
     ![Google Form Screenshot](assets/form.png)
 
 2.  **Destination Data**
