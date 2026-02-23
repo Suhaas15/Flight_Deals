@@ -1,7 +1,7 @@
-# 🛫 AirAlert -- Smarter Flight Deal Notifications
+# 🛫 AirAlert - Smarter Flight Deal Notifications
 
 Tired of boring Google Alerts?
-Meet **AirAlert** -- your personal flight deal hunter that scans
+Meet **AirAlert** - your personal flight deal hunter that scans
 **direct AND indirect flights**, across **multiple origins**, and sends
 you fun **email + WhatsApp alerts** when it finds something cheaper than
 your target price. ✨
